@@ -1,0 +1,20 @@
+rofi 
+dunst 
+brightnessctl
+networkmanager
+base-devel
+git
+yay (aur)
+network-manager-applet
+polybar
+feh
+yay: brave-bin
+neofetch
+plocate
+yay: i3lock-color
+unzip
+scrot
+
+_______________
+switching kernels
+https://itsfoss.com/switch-kernels-arch-linux/

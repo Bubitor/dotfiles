@@ -1,0 +1,60 @@
+rofi 
+dunst 
+networkmanager
+base-devel
+git
+network-manager-applet
+polybar
+feh
+brave-bin
+neofetch
+plocate
+scrot
+chromium
+dnsmasq
+htop
+discord
+cmus
+jdk8-openjdk jre8-openjdk jre8-openjdk-headless
+kitty
+cava
+virtualbox
+atom
+wget
+krita
+fish
+tty-clock-git
+filezilla
+python-pywal
+mpd
+linux-wifi-hotspot
+bluez
+bluez-utils-compat
+cmatrix
+curl: rustup
+cbonsai
+tor-browser
+ranger
+#vim
+osu-lazer-bin
+betterlockscreen
+simplescreenrecorder
+py: pip
+python-pip
+usbutils
+wine
+winetricks
+picom-ibhagwan-git
+conky
+steam
+zathura-pdf-mupdf
+ramfetch
+protonvpn-cli
+neovim
+spotifyd
+spotify-tui
+fprintd
+
+echo 5 > /sys/class/backlight/acpi_video0/brightness
+sudo echo 89 > /sys/class/power_supply/BAT0/charge_stop_threshold
+chsh -s /bin/fish

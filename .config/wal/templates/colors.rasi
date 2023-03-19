@@ -1,0 +1,6 @@
+* {{
+    background:{background};
+    background-alt:{background};
+    selected:{foreground};
+    foreground:{foreground};
+}}

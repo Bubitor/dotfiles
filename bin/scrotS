@@ -1,0 +1,3 @@
+#!/bin/bash
+
+scrot -s ~/D/scrot-%d-%m-%Y.png

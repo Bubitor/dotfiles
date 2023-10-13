@@ -21,7 +21,7 @@ window {
     text-color:                     @foreground;
     border-radius:                  12px;
     height:                         22%;
-    width:                          37%;
+    width:                          45%;
     location:                       center;
     x-offset:                       0;
     y-offset:                       0;
@@ -39,7 +39,7 @@ textbox-prompt-colon {
 	str: 							"Goodbye, Bubitor";
 	background-color: 				@background;
 	text-color: 					@foreground;
-    padding:                        3% 0.5% 0% 0%;
+  padding:              3% 0.5% 0% 3%;
 }
 
 inputbar {

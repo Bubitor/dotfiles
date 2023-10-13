@@ -1,0 +1,14 @@
+#!/bin/bash
+
+check() {
+	if [[ "$(ping google.com -c 1)" = "" ]]; then
+		echo "tak nic no..."
+	else
+		dunstify "Internet!!!!"
+	fi
+
+	sleep 5m
+	check
+}
+
+check

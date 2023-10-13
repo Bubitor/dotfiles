@@ -1,0 +1,13 @@
+#!/bin/bash
+
+DC=$(ls -al | grep discord*.tar.gz | awk '{print $8}')
+echo $DC
+
+if [ -f discord*.tar.gz ]; then
+	sudo tar -xvzf $DC -C /opt
+	sudo ln -sf /opt/discord/discord /usr/bin/discord
+	rm $DC
+	exit
+else
+	echo gDe dIscOrD?????
+fi

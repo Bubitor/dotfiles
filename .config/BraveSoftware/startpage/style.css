@@ -1,0 +1,205 @@
+@font-face {
+  font-family: Iosevka;
+  src: url(fonty/Iosevka.ttf);
+}
+@font-face {
+  font-family: FiraCode;
+  src: url(fonty/FiraCode-Regular.ttf);
+  font-weight: normal;
+}
+
+* {
+    /* Tokyonight colorscheme */
+    --background: #000000;
+    --foreground: #00ffd2;
+    --color0: #0a0047;
+    --color1: #004687;
+    --color2: #ff4499;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--background);
+  /* označování textu */
+  user-select: none;
+}
+
+.box {
+  background-color: rgba(0, 0, 0, 0.6); /*černá + 0.6 opacity*/
+  padding: 20px;
+  border: 5px solid var(--background);
+  border-radius: 15px;
+}
+
+#bg {
+  /* tohle zabralo více času než by se mi líbilo */
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  position: fixed;
+  transition: background-image 1s ease-in-out; /*bg přechod*/
+}
+
+#hodiny {
+  font-family: Iosevka;
+  color: var(--foreground);
+  font-size: 6em;
+  display: inline;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 20%;
+  left: 50%;
+}
+
+#datum {
+  font-family: Iosevka;
+  color: var(--color2);
+  font-size: 2em;
+  margin-top: 25px;
+  margin-right: 25px;
+  display: inline;
+  float: right;
+}
+
+.pocasi {
+  border: none;
+  margin-top: 25px;
+  margin-left: 25px;
+  width: 15%;
+  height: 120px;
+  pointer-events: none;
+  overflow: hidden;
+  /*box*/
+  background-color: rgba(0, 0, 0, 0.6); /*černá + 0.6 opacity*/
+  padding: 20px;
+  border: 5px solid var(--background);
+  border-radius: 15px;
+}
+
+.terminal {
+  font-family: monospace;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*box*/
+  background-color: rgba(0, 0, 0, 0.6); /*černá + 0.6 opacity*/
+  padding: 20px;
+  border: 5px solid var(--background);
+  border-radius: 15px;
+}
+
+.shell {
+  font-family: monospace;
+  color: var(--foreground);
+  font-size: 2.7em;
+}
+
+input {
+  font-family: monospace;
+  color: var(--color2);
+  font-size: 2.7em;
+  width: 50%;
+  margin-left: -10px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+
+/* odkazy - tabulka */
+
+.zalozky {
+  font-family: FiraCode;
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*box*/
+  background-color: rgba(0, 0, 0, 0.6); /*černá + 0.6 opacity*/
+  padding: 20px;
+  border: 5px solid var(--background);
+  border-radius: 15px;
+}
+
+li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.kategorie {
+  font-family: FiraCode;
+  color: var(--color2);
+  font-size: 1.1em;
+  text-decoration: underline;
+}
+
+a {
+  color: var(--foreground);
+  text-decoration: none;
+  /* "dragování" odkazů */
+  -webkit-user-drag: none;
+}
+
+a:hover {
+  animation: animace-zalozky 0.5s forwards;
+}
+
+img {
+  width: 25px;
+  /* nwm proč ale obrázky ignorují pravidla z body{} */
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/**/
+
+.license {
+  font-family: FiraCode;
+  color: var(--foreground);
+  position: absolute;
+  top: 96%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+}
+
+/* animace */
+
+.animace-vstup {
+	animation: animace-vstup 1s;
+}
+
+@keyframes animace-vstup {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	 }
+}
+
+@keyframes animace-zalozky {
+  0% {
+    color: var(--foreground);
+    text-decoration: none;
+  }
+  100% {
+    color: var(--color2);
+    text-decoration: underline;
+    font-style: italic;
+  }
+}
+
+
+/*tabulka*/
+.tabulka {
+  font-family: FiraCode;
+  color: var(--foreground)
+}
+
+.color2 {
+  color: var(--color2)
+}

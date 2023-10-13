@@ -1,0 +1,28 @@
+#!/bin/bash
+
+battery_status=$(cat /sys/class/power_supply/BAT0/status)
+current_day=$(timedatectl status | grep "Local" | awk '{print $3}')
+
+setxkbmap -layout cz,us -option grp:alt_shift_toggle
+nm-applet &
+dnsmasq &
+picom &
+~/.config/polybar/launch.sh &
+brightnessctl 8 &
+dunst &
+if [ "$current_day" == "Út" ]; then
+	wal -i ~/..D/wlp/chip_mocha_blue.png &
+	virt-manager &
+else
+	wal -i ~/..D/wlp/ &
+	Discord &
+fi
+
+if [ "$battery_status" != "Charging" ] && [ "$battery_status" != "Full" ]; then
+	i3-nagbar -m "Připoj to k tý zásuvce!!!" &
+fi &
+nvim --headless '+Lazy! sync' +qa &
+nmcli radio wifi off &
+numlockx &
+#sudo -u bubitor vpn &
+bt

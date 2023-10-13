@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ "$(ps aux | grep proton | grep -v grep)" = "" ]; then
+	sudo protonvpn c -f
+else
+	sudo protonvpn d
+fi

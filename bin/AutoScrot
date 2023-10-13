@@ -1,0 +1,11 @@
+#!/bin/bash
+
+runtime="10000000000 minute"
+endtime=$(date -ud "$runtime" +%s)
+
+while [[ $(date -u +%s) -le $endtime ]]; do
+	echo "Time Now: $(date +%H:%M:%S)"
+	echo "Sleeping for 2 minute"
+	scrot ~/D/temp/screenshot-%Y-%m-%d-%H_%M.png -q 100
+	sleep 2m
+done

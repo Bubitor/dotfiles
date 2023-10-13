@@ -6,3 +6,4 @@ some inspirations from: <br>
 https://github.com/owospace/messy-dots <br>
 https://github.com/tanishkushwaha/dotfiles <br>
 (and many others)
+nvim config is just LazyVim + few plugins I found<br>

@@ -1,0 +1,36 @@
+#!/bin/bash
+
+#ping
+if [[ "$(ping google.com -c 1 | grep 0%)"="" ]]; then
+	echo "internet: on"
+else
+	echo "internet: off"
+fi
+
+#wifi on/off
+if [[ "$(nmcli radio | awk 'NR==2{print$2}')" = "povoleno" ]]; then
+	echo "wifi:     on"
+else
+	echo "wifi:     off"
+fi
+
+#bt
+if [[ "$(bluetoothctl info | grep Connected: | awk '{print$2}')" = "yes" ]]; then
+	echo "bt:       on"
+else
+	echo "bt:       off"
+fi
+
+#protonvpn
+if [[ "$(protonvpn status | grep Status | awk '{print$2}')" = "Connected" ]]; then
+	echo "vpn:      on"
+else
+	echo "vpn:      off"
+fi
+
+#ip
+if [[ "$(curl -s ifconfig.me)" = "84.244.72.90" ]]; then
+	echo "ip:       unprotected"
+else
+	echo "ip:       protected"
+fi

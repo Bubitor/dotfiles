@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="cs-CZ">
+
+<head>
+  <meta name="description" content="Upravený osobní startpage.">
+  <meta name="keywords" content="startpage">
+  <meta name="author" content="Bubi">
+  <link rel="shortcut icon" href="obrazky/icon.png">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <link rel="stylesheet" href="scanlines.css">
+  <meta charset="utf-8">
+  <title>~/startpage</title>
+</head>
+
+<body class="animace-vstup">
+  <div id="bg">
+    <iframe class="pocasi" src="https://wttr.in/" scrolling="no"></iframe>
+    <!-- atribut scrolling je údajně zastaralý a má se použít místo něj overflow: hidden; v css
+  avšak ten nefunguje, jakmile jsem hledal jak tento problém vyřešit, našel jsem jen: scrolling="no"-->
+    <div class="box" id="hodiny"></div>
+    <div class="box" id="datum"></div>
+  </div>
+
+  <div class="terminal">
+    <form action="https://duckduckgo.com" method="get">
+      <label class="shell">~ &gt; search ~/</label>
+      <input type="text" name="q" autocomplete="off" maxlength="100" autofocus>
+    </form>
+  </div>
+
+  <div class="zalozky">
+    <ul>
+      <li><img src="obrazky/centrum.png" alt="centrum"><a href="https://user.centrum.cz/" target="_blank">Email</a></li>
+      <li><img src="obrazky/mega.png" alt="mega"><a href="https://mega.nz/" target="_blank">Mega</a></li>
+      <li><img src="obrazky/deepl.png" alt="deepl"><a href="https://www.deepl.com/translator" target="_blank">DeepL</a></li>
+      <li><img src="obrazky/youtube.png" alt="youtube"><a href="https://www.youtube.com/" target="_blank">YouTube</a></li>
+      <li><img src="obrazky/spotify.png" alt="spotify"><a href="https://open.spotify.com/" target="_blank">Spotify</a></li>
+      <li><img src="obrazky/twitch.png" alt="twitch"><a href="https://www.twitch.tv/" target="_blank">Twitch</a></li>
+    </ul>
+
+    <ul>
+      <li><img src="obrazky/epicgames.png" alt="epicgames"><a href="https://store.epicgames.com/" target="_blank">EpicGames</a></li>
+      <li><img src="obrazky/osu!.png" alt="osu!"><a href="https://osu.ppy.sh/beatmapsets" target="_blank">Osu!</a></li>
+      <li><img src="obrazky/protondb.png" alt="protondb"><a href="https://www.protondb.com/" target="_blank">ProtonDB</a></li>
+    </ul>
+
+    <ul class="kategorie"><li>Škola:</li></ul>
+
+    <ul>
+      <li><img src="obrazky/edupage.png" alt="edupage"><a href="https://sokolska.edupage.org/user/" target="_blank">EduPage</a></li>
+      <li><a href="https://fyzika.websy.cz/pro-studenty" target="_blank">Fyzika</a></li>
+      <li><img src="obrazky/itnetwork.png" alt="itnetwork"><a href="https://www.itnetwork.cz/html-css/webove-stranky" target="_blank">itnetwork (html)</a></li>
+      <li><img src="obrazky/msteams.png" alt="msteams"><a href="https://teams.microsoft.com/" target="_blank">MSTeams</a></li>
+    </ul>
+
+    <ul class="kategorie"><li>Linux:</li></ul>
+
+    <ul>
+      <li><img src="obrazky/aur.png" alt="aur"><a href="https://aur.archlinux.org/" target="_blank">AUR</a></li>
+      <li><img src="obrazky/reddit-linux-memes.png" alt="reddit-linuxmemes"><a href="https://www.reddit.com/r/linuxmemes/top/?t=day" target="_blank">memes</a></li>
+      <li><img src="obrazky/reddit-unixporn.png" alt="reddit-unixporn"><a href="https://www.reddit.com/r/unixporn/top/?t=day" target="_blank">rice</a></li>
+      <li><img src="obrazky/oraclecloud.png" alt="oraclecloud"><a href="https://www.oracle.com/cloud/sign-in.html" target="_blank">OracleCloud</a></li>
+    </ul>
+  </div>
+
+  <script src="js/rndmbg.js"></script>
+  <script src="js/hodiny.js"></script>
+  <script src="js/datum.js"></script>
+  <noscript>Tento startpage potřebuje ke správnému použití JavaScript!</noscript>
+</body>
+
+</html>

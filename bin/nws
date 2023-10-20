@@ -29,7 +29,7 @@ else
 fi
 
 #ip
-if [[ "$(curl -s ifconfig.me)" = "84.244.72.90" ]]; then
+if [[ "$(curl -s ifconfig.me)" = "" ]]; then
 	echo "ip:       unprotected"
 else
 	echo "ip:       protected"
